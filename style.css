@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(52,32,69,0.9920343137254902) 20%, rgba(124,19,118,0.9920343137254902) 47%, rgba(6,3,99,1) 88%);
+}
+
+h1 {
+    font-family: cursive;
+    font-size: 2.5rem;     
+    color: black;   
+    text-shadow: 0 0 20px red, 0 0 19px red; 
+    letter-spacing: 2px;
+}
+
+#calculator {
+    font-family: Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.658);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;       
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border:none;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.658); 
+          
+}
+
+#miniOperator {
+    color: white;
+    width: 100%;
+    padding: 0px 0px 0px 15px;    
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    text-align: left;   
+    opacity: 0.5;           
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 30px; 
+     
+}
+
+.operator {
+    color:rgb(253, 253, 253);
+    transition: 50ms ease;
+}
+
+.remove {
+    grid-column: 2 / 5;
+    width: 325px;
+    color: white;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+    border:none;
+    font-size: 3rem;
+    background-color: rgba(252, 34, 10, 40%);
+    font-weight: bold;
+    cursor:pointer;   
+    transition: 200ms ease;
+}
+
+button:hover{
+    background-color: rgba(252, 34, 10, 60%);
+    transition: 200ms ease;
+}
+
+button:active{
+    background-color: rgba(255, 255, 255, 60%);
+    transition: 50ms ease;
+    
+}
+
+#background-wrap {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.bubble {    
+    border-radius: 50%;       
+    height: 200px;
+    position: absolute;
+    width: 200px;    
+    transition: 500ms ease;           
+}
+
+@keyframes animateBubble {
+    0% {
+        margin-top: 1000px;
+        margin-left: 1000px;  
+ }
+    100% {
+        margin-top: -48%;
+        margin-left: -48%;   
+ }
+}
+
+.x1 {    
+    animation: animateBubble 9s linear infinite;
+    left: -5%;
+    top: 5%;
+    transform: scale(0.6);
+    box-shadow:30px 30px 75px orangered, inset 20px 20px 100px 5px orangered;
+    background-color: yellow;   
+}  
+
+.x2 {    
+    animation: animateBubble 9s linear infinite;
+    left: 5%;
+    top: 80%;    
+    transform: scale(0.8);   
+    box-shadow:30px 30px 75px rgba(206, 8, 212, 100%), inset 20px 20px 100px 5px rgba(206, 8, 212, 80%);
+    background-color: pink; 
+}
+
+.x3 {    
+    animation: animateBubble 9s linear infinite;
+    left: 30%;
+    top: 85%;    
+    transform: scale(0.6);    
+    box-shadow:30px 30px 75px black, inset 20px 20px 100px 5px black;
+    background-color: white; 
+}
+
+.x4 {    
+    animation: animateBubble 9s linear infinite;
+    left: 25%;
+    top: 0;   
+    transform: scale(0.9);
+    box-shadow:30px 30px 75px salmon, inset 20px 20px 100px 5px salmon;
+    background-color: white; 
+}
+
+.x5 {   
+    animation: animateBubble 9s linear infinite;
+    left: 43%;
+    top: 50%;    
+    transform: scale(0.5);
+    box-shadow:30px 30px 75px rgb(230, 12, 12), inset 20px 20px 100px 5px black;
+    background-color: red;   
+}
+
+.x6 {    
+    animation: animateBubble 9s linear infinite;
+    left: 75%;
+    top: 70%;    
+    transform: scale(0.8);   
+    box-shadow:30px 30px 75px blue, inset 20px 20px 100px 5px blue;
+    background-color: cyan;    
+}
+
+.x7 {   
+    animation: animateBubble 9s linear infinite;         
+    left: 15%;
+    top: 40%;    
+    transform: scale(0.5);
+    box-shadow:30px 30px 75px darkgreen, inset 20px 20px 100px 5px darkgreen;
+    background-color: lightgreen; 
+}
+
+.x8 {    
+    animation: animateBubble 9s linear infinite;
+    left: 80%;
+    top: 10%;   
+    transform: scale(0.3);    
+    box-shadow:30px 30px 75px purple, inset 20px 20px 100px 5px purple;
+    background-color: black; 
+}
+
+.x9 {   
+    animation: animateBubble 9s linear infinite;
+    left: 55%;
+    top: 10%;    
+    transform: scale(0.7); 
+    box-shadow:30px 30px 75px yellow, inset 20px 20px 100px 5px yellow;
+    background-color: white; 
+}
